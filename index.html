@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <link rel="stylesheet" type="text/css" href="css/cv.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		   var curIndex = 0; //当前index
+	     //  alert(imgLen);
+	     // 定时器自动变换5秒每次
+	  var autoChange = setInterval(function(){ 
+	    if(curIndex < $(".bg-img li").length-1){ 
+	      curIndex ++; 
+	    }else{ 
+	      curIndex = 0;
+	    }
+	    //调用变换处理函数
+	    changeTo(curIndex); 
+	  },5000);
+	
+	  function changeTo(num){ 
+	    $(".bg-img").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
+	  }
+
+	</script>
+</head>
+<body>
+	<div class="top1">
+		<div id="section1" class="section active">
+				<div id="top" title="顶部" style="display: none;">
+                    <img src="img/top.png" alt="回到顶部">
+                </div>
+                <div class="myIntro">
+                    <h1 class="fade fadesin1">Hello, I'm Writer</h1>
+                    <h3 class="fade fadesin2">一个拥有像素眼的前端工程师</h3>
+                    <span class="active fade fadesin3" id="abMe" ><a href="#aboutme">关于我</a></span>
+                    <span id="mypro" class="fade fadesin3"><a href="https://github.com/maozhi0720">我的作品</a></span>
+
+                    
+                </div>
+                <ul class="bg-img" style="padding-left: 0;margin: 0;">
+					  <li><a href="#"><img src="img/02.jpg" width="100%" alt="puss in boots2"></a></li>
+				      <li><a href="#"><img src="img/03.jpg" width="100%" alt="puss in boots3"></a></li>
+				      <li><a href="#"><img src="img/01.jpg" width="100%" alt="puss in boots4"></a></li>
+				      <img src="img/06.jpg" width="100%" alt="puss in boots5" >
+                </ul>
+		</div>
+	</div>
+
+	<div class="tail">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid"  style="padding-left:150px;overflow: hidden;">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header" >
+		    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+     			 </button>
+		      <a class="navbar-brand" href="https://github.com/maozhi0720">My GIthub</a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav" style="padding-left:100px;">
+		        <li><a href="#aboutme" style="font-size: 18px;">关于我</a></li>
+		        <li><a href="#section3" style="font-size: 18px;">求职意向</a></li>
+		        <li><a href="#section5" style="font-size: 18px;">技术掌握</a></li>
+		        <li><a href="#section6" style="font-size: 18px;">我的经历</a></li>
+		        <li><a href="#section7" style="font-size: 18px;">联系我</a></li>
+		        <li><a href="#section1" style="font-size: 18px;">返回顶部</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div id="aboutme">
+		<h2>关于我</h2>
+		<hr>			
+            <p class="myphoto"><img src="img/photo.jpg" alt="头像" class="img-circle"></p>
+            <div class="my-intro">
+                <p>我叫毛智，23岁，坐标西安，是一名前端工程师。前端是一门有容乃大的行业。 </p>
+                <p>本人性格开朗，大方。对事物有敏锐的洞察力;能很好得与人沟通，具有团队合作精神;对负责的工作会付出全部精力和热情，
+                	制定缜密计划，力争在最短时间内将目标达成;喜欢挑战，能在较短时间内适应高压力的工作。具有很好的组织能力</p>
+			 </div>
+		</div>
+            <div id="section3" class="section active">
+                <h2>求职意向</h2>
+                <hr>
+                <div class="container center fades fadesin">
+                    <div class="col-md-3 col-xs-6 skill-ps skill">
+                        <p><img src="./img/web.png" alt="切图"></p>
+                        <p class="ptitle">PS切图</p>
+                        <p>从PSD上切出页面需要的图片</p>
+                        <p>将小图标合成spirts优化。</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 skill-web skill">
+                        <p><img src="./img/css.png" alt="css"></p>
+                        <p class="ptitle">网页制作</p>
+                        <p>响应式页面,简单不冗余代码。</p>
+                        <p>css3流畅动画效果，兼容不同浏览器。</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 skill-js skill">
+                        <p><img src="./img/js.png" alt="js"></p>
+                        <p class="ptitle">前端功能</p>
+                        <p>用JS完成常见的前端功能特效</p>
+                        <p>用BootStrap框架效果更好</p>
+                    </div>
+                    <div class="col-md-3 col-xs-6 skill-h5 skill">
+                        <p><img src="./img/h5.png" alt="h5"></p>
+                        <p class="ptitle">h5页面</p>
+                        <p>移动端页面的书写</p>
+                        <p>兼容平板、安卓、IOS不同终端。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="section5" class="section active">
+                <h2>技术掌握</h2>
+                <hr>
+            	<div class="progress">
+				  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+				    <span id="" style="font-size: 13PX;">
+				    	HTML/CSS
+				    </span>
+				  </div>
+				</div>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				    <span class="sr-only">80% Complete</span>
+				    <span id="" style="font-size: 13PX;">
+				    	JavaScript
+				    </span>
+				  </div>
+				</div>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+				    <span id="" style="font-size: 13PX;">
+				    	C/C++
+				    </span>
+				  </div>
+				</div>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				    <span id="" style="font-size: 13PX;">
+				    	js
+				    </span>
+				  </div>
+				</div>
+				<div class="progress">
+				  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+				    <span id="" style="font-size: 13PX;">
+				    	Python
+				    </span>
+				  </div>
+				</div>
+			</div>
+            <div id="section6" class="section active">
+                <h2>我的经历</h2>
+                <hr>
+                <div class="container center fades fadesin">
+                    <ul class="my-xp">
+                        
+                        <li>
+                            <div class="date-box">
+                                <p>07/2021</p>
+                                <p>-</p>
+                                <p>09/2017</p>
+                            </div>
+                            <div class="my-school my-xp-box">
+                                <strong>西安石油大学</strong>
+                                <p class="ptitle">大学本科</p>
+                                <p>软件工程</p>
+                                <p>获得全国人工智能算法赛优秀奖</p>
+                                <p></p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>	
+            <div id="section7" >
+                <h2>联系我</h2>
+                <hr>
+                <div class="list-group">
+				  <a href="#" class="list-group-item active">
+				    Cras justo odio
+				  </a>
+				  <a href="https://github.com/maozhi0720" class="list-group-item">Github</a>
+				  <a href="mailto:maozhijob@163.com" class="list-group-item">E-Mail</a>
+				  <a href="img/WeChat.jpg" class="list-group-item">WeChat</a>
+				  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=rdR7aRoTmAf80YgakNmgVn3JWzeCx9jw" class="list-group-item">QQ</a>
+				</div>
+            </div>
+	</div>
+
+</body>
+</html>
